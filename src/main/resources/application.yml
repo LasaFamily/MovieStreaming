@@ -6,7 +6,7 @@ movie:
   base:
     url: https://api.themoviedb.org/3
   host:
-    url: http://localhost:7861
+    url: https://moviestreaming-m05h.onrender.com
 
 spring:
   datasource:

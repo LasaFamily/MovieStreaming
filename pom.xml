@@ -12,7 +12,7 @@
 	<artifactId>moviekit</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>moviekit</name>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<description>watch movies from any where</description>
 	<properties>
 		<java.version>11</java.version>
