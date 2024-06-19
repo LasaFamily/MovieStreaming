@@ -130,8 +130,8 @@ public class ShowDetailsServiceImpl extends AutowiredService implements ShowDeta
         if (StringUtils.hasText(show.getShowServerIds())) {
             List<String> servers = Stream.of(show.getShowServerIds().split(",")).collect(Collectors.toList());
             for(int i = 0; i< servers.size(); i++) {
-                // String url = "https://watchseries.pe/ajax/episode/sources/" + servers.get(i);
-                String url = "https://himovies.to/ajax/episode/sources/" + servers.get(i);
+                String url = "https://watchseries.pe/ajax/episode/sources/" + servers.get(i);
+                // String url = "https://himovies.to/ajax/episode/sources/" + servers.get(i);
                 try {
                     HttpResponse<JsonNode> jsonResponse = Unirest.get(url).asJson();
                     if (jsonResponse.getStatus() == HttpStatus.SC_OK) {
@@ -152,8 +152,8 @@ public class ShowDetailsServiceImpl extends AutowiredService implements ShowDeta
 
     private List<String> getShowStreamingByEpisodeId(String episodeId) {
         List<String> serverIds = new ArrayList<>();
-        // String url = "https://watchseries.pe/ajax/episode/servers/" + episodeId;
-        String url = "https://himovies.to/ajax/episode/servers/" + episodeId;
+        String url = "https://watchseries.pe/ajax/episode/servers/" + episodeId;
+        // String url = "https://himovies.to/ajax/episode/servers/" + episodeId;
         try {
             HttpResponse<String> jsonResponse = Unirest.get(url).asString();
             if (jsonResponse.getStatus() != HttpStatus.SC_OK) {

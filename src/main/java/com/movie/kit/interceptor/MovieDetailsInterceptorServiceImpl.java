@@ -97,8 +97,8 @@ public class MovieDetailsInterceptorServiceImpl extends AutowiredAndValueService
         if (StringUtils.hasText(movie.getMovieServerIds())) {
             List<String> servers = Stream.of(movie.getMovieServerIds().split(",")).collect(Collectors.toList());
             for(int i = 0; i< servers.size(); i++) {
-                // String url = "https://watchseries.pe/ajax/episode/sources/" + servers.get(i);
-                String url = "https://himovies.to/ajax/episode/sources/" + servers.get(i);
+                String url = "https://watchseries.pe/ajax/episode/sources/" + servers.get(i);
+                // String url = "https://himovies.to/ajax/episode/sources/" + servers.get(i);
                 try {
                     HttpResponse<JsonNode> jsonResponse = Unirest.get(url).asJson();
                     if (jsonResponse.getStatus() == HttpStatus.SC_OK) {
