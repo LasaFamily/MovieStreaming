@@ -4,7 +4,7 @@ movie:
   base:
     url: https://api.themoviedb.org/3
   host:
-    url: https://moviestreaming-m05h.onrender.com
+    url: https://moviestreaming-g31d.onrender.com
 
 spring:
   datasource:
