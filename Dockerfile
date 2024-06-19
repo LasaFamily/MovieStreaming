@@ -1,5 +1,5 @@
 FROM maven:3.8.3-openjdk-11 as build
-COPY ..
+COPY . .
 RUN mvn clean package -DskipTests
 
 FROM adoptopenjdk/openjdk11:jdk-11.0.11_9-alpine-slim
