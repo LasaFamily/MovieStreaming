@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"></head>
+<body>
+<div class="ms_main_wrapper">
+    <div th:replace="fragments/sideMenu :: sideMenu"></div>
+    <div class="ms_content_wrapper padder_top80">
+        <div th:replace="fragments/topMenu :: topMenu"></div>
+
+        <div class="ms_blog_single_wrapper">
+            <div class="row">
+                <div class="col-lg-10 col-md-10">
+                    <div class="ms_blog_single">
+                        <div class="blog_single_img ms_blog_section blog_active marger_bottom30 ms_genres_box" id="displayImage">
+                            <img th:src="${movie.movieBanner != null ? 'https://www.themoviedb.org/t/p/original' + movie.movieBanner : '/default/default.svg'}"
+                                 alt="" class="img-fluid image-height-520">
+                            <div class="ms_main_overlay">
+                                <div class="ms_box_overlay"></div>
+                                <div class="ms_play_icon">
+                                    <a href="javascript:void(0);"
+                                       th:attr="onclick=|newVideo('0')|"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog_single_img ms_blog_section blog_active marger_bottom30 ms_genres_box" id="displayVideo" style="display:none;">
+                            <iframe th:src="${movie.movieStreaming[0].url}" style="height: 520px; width: 100%"
+                                    marginheight="0"
+                                    align="top" scrolling="No" frameborder="0" hspace="0" vspace="0"
+                                    sandboxscrolling="no" allowfullscreen="true" id="new_video" webkitallowfullscreen="true"
+                                    mozallowfullscreen="true" referrerpolicy="origin"></iframe>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="ms_banner_text" style="padding-top:0px;text-align:center;width: 100%;">
+                                    <div class="ms_banner_btn">
+                                        <a href="javascript:void(0);"
+                                           th:attr="onclick=|newVideo('${iter.index}')|" class="ms_btn"
+                                           th:each="movieStreaming, iter : ${movie.movieStreaming}" th:text="${movieStreaming.server}" style="width: 130px;margin:15px;">Listen Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer_border" style="margin-top: 24px;width: 100%;"></div>
+                        <div class="blog_single_content">
+                            <h3 class="ms_blog_title" th:text="${movie.movieName}">Dream Your Moments</h3>
+                            <div class="ms_post_meta">
+                                <ul>
+                                    <li th:inline="text"><span class="fa fa-calendar"></span>
+                                        [[${movie.movieReleaseDate}]] /
+                                    </li>
+                                    <li th:inline="text"><span class="fa fa-star checked"></span>
+                                        [[${movie.movieRating}]] /
+                                    </li>
+                                    <li th:inline="text"><span class="fa fa-users"></span> [[${movie.moviePopularity}]]
+                                    </li>
+                                </ul>
+                            </div>
+                            <p th:text="${movie.movieOverview}">movie text</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            <div class="footer_box footer_contacts">
+                                <h1 class="footer_title">Movie Information</h1>
+                                <ul class="foo_con_info">
+                                    <li>
+                                        <div class="foo_con_icon">
+                                            <img th:src="@{/images/svg/phone.svg}" alt="">
+                                        </div>
+                                        <div class="foo_con_data">
+                                            <span class="con-title">Director :</span>
+                                            <span th:text="${movie.movieDirectors}"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="foo_con_icon">
+                                            <img th:src="@{/images/svg/message.svg}" alt="">
+                                        </div>
+                                        <div class="foo_con_data">
+                                            <span class="con-title">Producer :</span>
+                                            <span th:text="${movie.movieProducers}"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="foo_con_icon">
+                                            <img th:src="@{/images/svg/add.svg}" alt="">
+                                        </div>
+                                        <div class="foo_con_data">
+                                            <span class="con-title">Budget / Collection :</span>
+                                            <span th:inline="text">[[${movie.movieBudget}]] / [[${movie.movieCollection}]]</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="footer_box footer_contacts">
+                                <h1 class="footer_title">General Information</h1>
+                                <ul class="foo_con_info">
+                                    <li>
+                                        <div class="foo_con_icon">
+                                            <img th:src="@{/images/svg/phone.svg}" alt="">
+                                        </div>
+                                        <div class="foo_con_data">
+                                            <span class="con-title">Status :</span>
+                                            <span th:text="${movie.movieStatus}"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="foo_con_icon">
+                                            <img th:src="@{/images/svg/message.svg}" alt="">
+                                        </div>
+                                        <div class="foo_con_data">
+                                            <span class="con-title">Duration :</span>
+                                            <span th:text="${movie.movieDuration}"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="foo_con_icon">
+                                            <img th:src="@{/images/svg/add.svg}" alt="">
+                                        </div>
+                                        <div class="foo_con_data">
+                                            <span class="con-title">Language :</span>
+                                            <span th:inline="text">[[${movie.movieOriginalLanguage}]]</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5" th:if="${movie.movieTrailers.size() > 0 }">
+                            <div class="footer_box footer_contacts">
+                                <iframe width="100%" height="230px" th:src="${'https://www.youtube.com/embed/' + movie.movieTrailers[0].trailerKey}" title="Yuvatha Meluko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <!----Sidebar Start---->
+                    <div class="ms_sidebar">
+                        <div class="widget widget_search blog_single_img">
+                            <img th:src="${movie.moviePoster != null ? 'https://www.themoviedb.org/t/p/original' + movie.moviePoster : '/default/default.svg'}"
+                                 alt="" class="img-fluid image-height-520">
+                        </div>
+                        <!--Categories-->
+                        <div class="widget widget_categories">
+                            <h2 class="widget-title">Genres</h2>
+                            <ul>
+                                <li th:each="genre : ${movie.genres}"><a th:href="${'/genre/movies/' + genre.genericId}"
+                                                                         th:text="${genre.genericName}"> Artist & Band
+                                    Profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ms_rcnt_slider padder_top30">
+            <div class="ms_heading">
+                <h1>Recommendation Movies</h1>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" th:each="movie : ${movies}">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img th:src="${movie.moviePoster != null ? 'https://www.themoviedb.org/t/p/original' + movie.moviePoster :
+                                movie.movieBanner != null ? 'https://www.themoviedb.org/t/p/original' + movie.movieBanner : '/default/default.svg'}" alt="" class="image-height-255">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/movie/details/' + movie.movieId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3 class="text-ellipsis"><a th:href="${'/movie/details/' + movie.movieId}" th:text="${movie.movieName}">Dream Your Moments (Duet)</a></h3>
+                                <p th:text="${movie.movieReleaseDate}">Ava Cornish & Brian Hill</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next slider_nav_next"></div>
+            <div class="swiper-button-prev slider_nav_prev"></div>
+        </div>
+        <div class="ms_weekly_wrapper">
+            <div class="ms_weekly_inner">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ms_heading">
+                            <h1>Movie Cast</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 padding_right40" th:each="person, iter : ${movie.movieCasts}">
+                        <div class="ms_weekly_box">
+                            <div class="weekly_left">
+                                    <span class="w_top_no"
+                                          th:text="${(iter.index + 1) <= 9 ? '0'+ (iter.index + 1) : iter.index + 1}">
+										01
+									</span>
+                                <div class="w_top_song">
+                                    <div class="w_tp_song_img">
+                                        <img th:src="${person.personImage != null ? 'https://image.tmdb.org/t/p/w50_and_h50_face' + person.personImage :  '/default/default.svg'}"
+                                             alt="" class="img-fluid">
+                                        <div class="ms_song_overlay">
+                                        </div>
+                                        <div class="ms_play_icon">
+                                            <a th:href="${'/person/movies/' + person.personId}"><img
+                                                    th:src="@{/images/svg/play.svg}" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="w_tp_song_name">
+                                        <h3 class="max-width-236"><a th:href="${'/person/movies/' + person.personId}"
+                                                                     th:text="${person.personName}">Until I Met You</a>
+                                        </h3>
+                                        <p th:text="${person.personJob}" class="max-width-236">Ava Cornish</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms_divider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ms_weekly_wrapper">
+            <div class="ms_weekly_inner">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ms_heading">
+                            <h1>Movie Crew</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 padding_right40" th:each="person, iter : ${movie.movieCrews}">
+                        <div class="ms_weekly_box">
+                            <div class="weekly_left">
+                                    <span class="w_top_no"
+                                          th:text="${(iter.index + 1) <= 9 ? '0'+ (iter.index + 1) : iter.index + 1}">
+										01
+									</span>
+                                <div class="w_top_song">
+                                    <div class="w_tp_song_img">
+                                        <img th:src="${person.personImage != null ? 'https://image.tmdb.org/t/p/w50_and_h50_face' + person.personImage :  '/default/default.svg'}"
+                                             alt="" class="img-fluid">
+                                        <div class="ms_song_overlay">
+                                        </div>
+                                        <div class="ms_play_icon">
+                                            <a th:href="${'/person/movies/' + person.personId}">
+                                                <img th:src="@{/images/svg/play.svg}" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="w_tp_song_name">
+                                        <h3 class="max-width-236">
+                                            <a th:href="${'/person/movies/' + person.personId}" th:text="${person.personName}">Until I Met You</a>
+                                        </h3>
+                                        <p th:text="${person.personJob}" class="max-width-236">Ava Cornish</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms_divider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/scriptFile :: scriptFile"></div>
+<script type="text/javascript" th:inline="javascript">
+var movie = [[${movie}]];
+function newVideo(index) {
+  $("#displayImage").hide();
+  $("#displayVideo").show();
+  $("#new_video").attr('src', movie.movieStreaming[index].url);
+}
+</script>
+</body>
+</html>

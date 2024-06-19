@@ -1,0 +1,56 @@
+package com.movie.kit.constants;
+
+public class ApiConstants {
+    public static final String SLASH = "/";
+    public static final String MOVIE = "movie";
+    public static final String TV = "tv";
+    public static final String PERSON = "person";
+    public static final String POPULAR = "popular";
+    public static final String GENRE = "genre";
+    public static final String CONFIGURATION = "configuration";
+    public static final String COUNTRIES = "countries";
+    public static final String LIST = "list";
+    public static final String QUESTION_MARK = "?";
+    public static final String PAGE = "page";
+    public static final String EQUALS = "=";
+    public static final String AUTHORIZATION = "Authorization";
+    public static final String RESULTS = "RESULTS";
+    public static final String ROMANCE = "Romance";
+    public static final String MUSIC = "Music";
+    public static final String HISTORY = "History";
+    public static final String HORROR = "Horror";
+    public static final String WEEK = "week";
+    public static final String DAY = "day";
+    public static final String TRENDING = "trending";
+    public static final String MOVIES = "movies";
+    public static final String SHOWS = "shows";
+    public static final String GENRES = "GENRES";
+    public static final String PERSONS = "persons";
+    public static final String  SEARCH = "search";
+    public static final String  QUERY = "query";
+    public static final String AND = "&";
+    public static final String DISCOVER = "discover";
+    public static final String WITH_GENRES = "with_genres";
+    public static final String WITH_ORIGIN_COUNTRY = "with_origin_country";
+    public static final String SORT_BY = "sort_by";
+    public static final String POPULARITY_DESC = "popularity.desc";
+    public static final String CAST = "CAST";
+    public static final String CREW = "CREW";
+    public static final String MOVIE_CREDIT = "movie_credits";
+    public static final String TV_CREDIT = "tv_credits";
+    public static final String APPEND_TO_RESPONSE = "append_to_response";
+    public static final String PARAMS = "videos,images,credits,external_ids";
+    public static final String VIDEOS = "videos";
+    public static final String IMAGES = "images";
+    public static final String POSTERS = "posters";
+    public static final String CREDITS = "credits";
+    public static final String TRAILER = "Trailer";
+    public static final String TEASER = "Teaser";
+    public static final String RECOMMENDATIONS = "recommendations";
+    public static final String EXTERNAL_IDS = "external_ids";
+    public static final String IMDB_ID = "imdb_id";
+    public static final String SEASON = "season";
+    public static final String EPISODES = "episodes";
+    public static final String EMPTY = "";
+
+}

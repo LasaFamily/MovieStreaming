@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header">
+
+    <title th:text="${title}">title</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#e90101"/>
+    <meta name="robots" content="index, follow"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="Music, Streaming, Videos"/>
+    <meta name="keywords"
+          content="video, movie, show, tv, watch, online, streaming, stream, ads, trailer, imdb, dram, action,
+          hollywood, cinema, rate"/>
+    <meta name="author" content="Lokesh Kumar G">
+    <meta name="MobileOptimized" content="320">
+
+    <link type="text/css" rel="stylesheet" th:href="@{/css/fonts.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/font-awesome.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/js/plugins/swiper/css/swiper.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/js/plugins/nice_select/nice-select.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/js/plugins/player/volume.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/js/plugins/scroll/jquery.mCustomScrollbar.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="shortcut icon" type="image/png" th:href="@{/images/favicon.png}" />
+    <style>
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	background-color: #65ee5b;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	background-color: #65ee5b;
+}
+
+    </style>
+
+</head>
+</html>

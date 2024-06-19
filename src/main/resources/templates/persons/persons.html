@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"></head>
+<body>
+<div class="ms_main_wrapper">
+    <div th:replace="fragments/sideMenu :: sideMenu"></div>
+    <div class="ms_content_wrapper padder_top80">
+        <div th:replace="fragments/topMenu :: topMenu"></div>
+        <div class="ms_blog_wrapper">
+            <div class="ms_heading">
+                <h1 th:text="${viewName}">Persons</h1>
+            </div>
+            <span id="appendData"></span>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/scriptFile :: scriptFile"></div>
+<script type="text/javascript" th:inline="javascript">
+ //<![CDATA[
+	$(function() {
+		var pageIndex = [[${pageIndex}]];
+		$.get("/persons/append?pageIndex=" + pageIndex, function(response) {
+			$("#appendData").append(response);
+		});
+
+		$(document.body).on('touchmove', onScroll);
+		$(window).on('scroll', onScroll);
+		function onScroll() {
+			if (Math.round($(window).scrollTop() + window.innerHeight) >= document.body.scrollHeight) {
+				pageIndex = parseInt(pageIndex) + 1;
+				$.get("/persons/append?pageIndex=" + pageIndex, function(response) {
+                    $("#appendData").append(response);
+                });
+			}
+		}
+	});
+ // ]]>
+</script>
+</body>
+</html>

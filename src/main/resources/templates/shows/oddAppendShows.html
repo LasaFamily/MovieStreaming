@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div class="row">
+    <div class="col-lg-6" th:if="${shows.size() >=1 && shows[0] != null}">
+        <div class="ms_blog_section blog_active marger_bottom30 ms_genres_box">
+            <div class="ms_blog_img">
+                <img th:src="${shows[0].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[0].showBanner :
+                shows[0].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[0].showPoster : '/default/default.svg'}" alt="" class="img-fluid image-height-472">
+            </div>
+            <div class="ms_main_overlay">
+                <div class="ms_box_overlay"></div>
+                <div class="ms_play_icon">
+                    <a th:href="${'/show/details/' + shows[0].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                </div>
+                <div class="ovrly_text_div">
+                    <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[0].showId}" th:text="${shows[0].showName}">Fenne Lily - Three Oh Nine</a></span>
+                    <div class="bottom">
+                        <span class="ovrly_text1" th:text="${shows[0].showReleaseDate}">May 12,2018</span>
+                        <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[0].showId}" th:text="${shows[0].showRating}"></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ms_box_overlay_on">
+                <div class="ovrly_text_div">
+                    <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[0].showId}" th:text="${shows[0].showName}">Fenne Lily - Three Oh Nine</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="row">
+            <div class="col-lg-6" th:if="${shows.size() >=2 && shows[1] != null}">
+                <div class="ms_blog_section marger_bottom30 ms_genres_box ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[1].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[1].showBanner :
+                        shows[1].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[1].showPoster : '/default/default.svg'}" alt="" class="img-fluid image-height-221">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[1].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[1].showId}" th:text="${shows[1].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[1].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[1].showId}" th:text="${shows[1].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[1].showId}" th:text="${shows[1].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" th:if="${shows.size() >=3 && shows[2] != null}">
+                <div class="ms_blog_section marger_bottom30 ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[2].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[2].showBanner :
+                        shows[2].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[2].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-221">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[2].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[2].showId}" th:text="${shows[2].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[2].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[2].showId}" th:text="${shows[2].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[2].showId}" th:text="${shows[2].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" th:if="${shows.size() >=4 && shows[3] != null}">
+                <div class="ms_blog_section marger_bottom30 ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[3].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[3].showBanner :
+                        shows[3].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[3].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-221">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[3].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[3].showId}" th:text="${shows[3].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[3].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[3].showId}" th:text="${shows[3].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[3].showId}" th:text="${shows[3].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" th:if="${shows.size() >=5 && shows[4] != null}">
+                <div class="ms_blog_section marger_bottom30 ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[4].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[4].showBanner :
+                        shows[4].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[4].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-221">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[4].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[4].showId}" th:text="${shows[4].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[4].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[4].showId}" th:text="${shows[4].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[4].showId}" th:text="${shows[4].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="row">
+            <div class="col-lg-5" th:if="${shows.size() >=6 && shows[5] != null}">
+                <div class="ms_blog_section marger_bottom30 ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[5].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[5].showBanner :
+                        shows[5].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[5].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-261">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[5].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[5].showId}" th:text="${shows[5].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[5].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[5].showId}" th:text="${shows[5].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[5].showId}" th:text="${shows[5].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7" th:if="${shows.size() >=7 && shows[6] != null}">
+                <div class="ms_blog_section marger_bottom30 ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[6].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[6].showBanner :
+                        shows[6].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[6].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-261">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[6].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[6].showId}" th:text="${shows[6].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[6].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[6].showId}" th:text="${shows[6].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[6].showId}" th:text="${shows[6].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7" th:if="${shows.size() >=8 && shows[7] != null}">
+                <div class="ms_blog_section ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[7].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[7].showBanner :
+                        shows[7].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[7].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-261">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[7].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[7].showId}" th:text="${shows[7].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[7].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[7].showId}" th:text="${shows[7].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[7].showId}" th:text="${shows[7].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5" th:if="${shows.size() >=9 && shows[8] != null}">
+                <div class="ms_blog_section ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[8].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[8].showBanner :
+                        shows[8].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[8].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-261">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[8].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[8].showId}" th:text="${shows[8].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[8].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[8].showId}" th:text="${shows[8].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[8].showId}" th:text="${shows[8].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="row">
+            <div class="col-lg-5" th:if="${shows.size() >=10 && shows[9] != null}">
+                <div class="ms_blog_section marger_bottom30 ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[9].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[9].showBanner :
+                        shows[9].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[9].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-261">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[9].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[9].showId}" th:text="${shows[9].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[9].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[9].showId}" th:text="${shows[9].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[9].showId}" th:text="${shows[9].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7" th:if="${shows.size() >=11 && shows[10] != null}">
+                <div class="ms_blog_section marger_bottom30 ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[10].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[10].showBanner :
+                        shows[10].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[10].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-261">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[10].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[10].showId}" th:text="${shows[10].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[10].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[10].showId}" th:text="${shows[10].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[10].showId}" th:text="${shows[10].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7" th:if="${shows.size() >=12 && shows[11] != null}">
+                <div class="ms_blog_section ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[11].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[11].showBanner :
+                        shows[11].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[11].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-261">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[11].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[11].showId}" th:text="${shows[11].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[11].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[11].showId}" th:text="${shows[11].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[11].showId}" th:text="${shows[11].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5" th:if="${shows.size() >=13 && shows[12] != null}">
+                <div class="ms_blog_section ms_genres_box">
+                    <div class="ms_blog_img">
+                        <img th:src="${shows[12].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[12].showBanner :
+                        shows[12].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[12].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-261">
+                    </div>
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[12].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[12].showId}" th:text="${shows[12].showName}">Fenne Lily - Three Oh Nine</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[12].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[12].showId}" th:text="${shows[12].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[12].showId}" th:text="${shows[12].showName}">Fenne Lily - Three Oh Nine</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4" th:if="${shows.size() >=14 && shows[13] != null}">
+        <div class="ms_blog_section ms_genres_box">
+            <img th:src="${shows[13].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[13].showBanner :
+            shows[13].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[13].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-534" />
+            <div class="ms_main_overlay">
+                <div class="ms_box_overlay"></div>
+                <div class="ms_play_icon">
+                    <a th:href="${'/show/details/' + shows[13].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                </div>
+                <div class="ovrly_text_div">
+                    <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[13].showId}" th:text="${shows[13].showName}">romantic</a></span>
+                    <div class="bottom">
+                        <span class="ovrly_text1" th:text="${shows[13].showReleaseDate}">May 12,2018</span>
+                        <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[13].showId}" th:text="${shows[13].showRating}"></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ms_box_overlay_on">
+                <div class="ovrly_text_div">
+                    <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[13].showId}" th:text="${shows[13].showName}">romantic</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="row">
+            <div class="col-lg-4" th:if="${shows.size() >=16 && shows[15] != null}">
+                <div class="ms_blog_section ms_genres_box">
+                    <img th:src="${shows[15].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[15].showBanner :
+                    shows[15].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[15].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-252" />
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[15].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[15].showId}" th:text="${shows[15].showName}">romantic</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[15].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[15].showId}" th:text="${shows[15].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[15].showId}" th:text="${shows[15].showName}">romantic</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" th:if="${shows.size() >=15 && shows[14] != null}">
+                <div class="ms_blog_section ms_genres_box">
+                    <img th:src="${shows[14].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[14].showBanner :
+                    shows[14].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[14].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-252" />
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[14].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[14].showId}" th:text="${shows[14].showName}">romantic</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[14].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[14].showId}" th:text="${shows[14].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[14].showId}" th:text="${shows[14].showName}">romantic</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" th:if="${shows.size() >=17 && shows[16] != null}">
+                <div class="ms_blog_section ms_genres_box">
+                    <img th:src="${shows[16].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[16].showBanner :
+                    shows[16].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[16].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-252" />
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[16].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[16].showId}" th:text="${shows[16].showName}">romantic</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[16].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[16].showId}" th:text="${shows[16].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[16].showId}" th:text="${shows[16].showName}">romantic</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8" th:if="${shows.size() >=18 && shows[17] != null}">
+                <div class="ms_blog_section ms_genres_box">
+                    <img th:src="${shows[17].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[17].showBanner :
+                    shows[17].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[17].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-252" />
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[17].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[17].showId}" th:text="${shows[17].showName}">romantic</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[17].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[17].showId}" th:text="${shows[17].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[17].showId}" th:text="${shows[17].showName}">romantic</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" th:if="${shows.size() >=19 && shows[18] != null}">
+                <div class="ms_blog_section ms_genres_box">
+                    <img th:src="${shows[18].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[18].showBanner :
+                    shows[18].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[18].showPoster : '/default/default.svg'}"  alt="" class="img-fluid image-height-252" />
+                    <div class="ms_main_overlay">
+                        <div class="ms_box_overlay"></div>
+                        <div class="ms_play_icon">
+                            <a th:href="${'/show/details/' + shows[18].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[18].showId}" th:text="${shows[18].showName}">romantic</a></span>
+                            <div class="bottom">
+                                <span class="ovrly_text1" th:text="${shows[18].showReleaseDate}">May 12,2018</span>
+                                <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[18].showId}" th:text="${shows[18].showRating}"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_box_overlay_on">
+                        <div class="ovrly_text_div">
+                            <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[18].showId}" th:text="${shows[18].showName}">romantic</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2" th:if="${shows.size() >=20 && shows[19] != null}">
+        <div class="ms_blog_section ms_genres_box">
+            <img th:src="${shows[19].showPoster != null ? 'https://www.themoviedb.org/t/p/original' + shows[19].showPoster :
+            shows[19].showBanner != null ? 'https://www.themoviedb.org/t/p/original' + shows[19].showBanner : '/default/default.svg'}"  alt="" class="img-fluid image-height-534" />
+            <div class="ms_main_overlay">
+                <div class="ms_box_overlay"></div>
+                <div class="ms_play_icon">
+                    <a th:href="${'/show/details/' + shows[19].showId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                </div>
+                <div class="ovrly_text_div">
+                    <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[19].showId}" th:text="${shows[19].showName}">romantic</a></span>
+                    <div class="bottom">
+                        <span class="ovrly_text1" th:text="${shows[19].showReleaseDate}">May 12,2018</span>
+                        <span class="ovrly_text2"><a th:href="${'/show/details/' + shows[19].showId}" th:text="${shows[19].showRating}"></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ms_box_overlay_on">
+                <div class="ovrly_text_div">
+                    <span class="ovrly_text1"><a th:href="${'/show/details/' + shows[19].showId}" th:text="${shows[19].showName}">romantic</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

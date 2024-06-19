@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div class="ms_header" th:fragment="topMenu">
+    <div class="ms_top_left">
+        <input type="radio" name="searchType" value="movies" th:checked="${userSearch == 'movies'}"> Movies |
+        <input type="radio" name="searchType" value="shows" th:checked="${userSearch == 'shows'}"> Shows |
+        <input type="radio" name="searchType" value="persons" th:checked="${userSearch == 'persons'}"> Persons
+        <div class="ms_top_search">
+            <input type="text" class="form-control" placeholder="Search Music Here.." name="search" id="search">
+            <span class="search_icon" id="search_button">
+                    <img th:src="@{/images/svg/search.svg}" alt="">
+                </span>
+        </div>
+    </div>
+</div>
+</html>

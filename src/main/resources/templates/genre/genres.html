@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"></head>
+<body>
+<div class="ms_main_wrapper">
+    <div th:replace="fragments/sideMenu :: sideMenu"></div>
+    <div class="ms_content_wrapper padder_top80">
+        <div th:replace="fragments/topMenu :: topMenu"></div>
+        <div class="ms_genres_wrapper ms_genres_single padder_top30">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ms_heading">
+                        <h1>Movie Genres</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[0].genericName + '.jpg'}" alt="" class="img-fluid image-height-534" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[0].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[0].genericId}" th:text="${movieGenres[0].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[0].genericId}" th:text="${movieGenres[0].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + movieGenres[1].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/movies/' + movieGenres[1].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[1].genericId}" th:text="${movieGenres[1].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[1].genericId}" th:text="${movieGenres[1].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + movieGenres[2].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/movies/' + movieGenres[2].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[2].genericId}" th:text="${movieGenres[2].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[2].genericId}" th:text="${movieGenres[2].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + movieGenres[3].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/movies/' + movieGenres[3].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[3].genericId}" th:text="${movieGenres[3].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[3].genericId}" th:text="${movieGenres[3].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + movieGenres[4].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/movies/' + movieGenres[4].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[4].genericId}" th:text="${movieGenres[4].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[4].genericId}" th:text="${movieGenres[4].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[5].genericName + '.jpg'}" alt="" class="img-fluid image-height-534" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[5].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[5].genericId}" th:text="${movieGenres[5].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[5].genericId}" th:text="${movieGenres[5].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + movieGenres[6].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/movies/' + movieGenres[6].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[6].genericId}" th:text="${movieGenres[6].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[6].genericId}" th:text="${movieGenres[6].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + movieGenres[11].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/movies/' + movieGenres[11].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[11].genericId}" th:text="${movieGenres[11].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[11].genericId}" th:text="${movieGenres[11].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + movieGenres[8].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/movies/' + movieGenres[8].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[8].genericId}" th:text="${movieGenres[8].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[8].genericId}" th:text="${movieGenres[8].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + movieGenres[9].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/movies/' + movieGenres[9].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[9].genericId}" th:text="${movieGenres[9].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[9].genericId}" th:text="${movieGenres[9].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + movieGenres[10].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/movies/' + movieGenres[10].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[10].genericId}" th:text="${movieGenres[10].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[10].genericId}" th:text="${movieGenres[10].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[7].genericName + '.jpg'}" alt="" class="img-fluid image-height-534" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[7].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[7].genericId}" th:text="${movieGenres[7].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[7].genericId}" th:text="${movieGenres[7].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[12].genericName + '.jpg'}" alt="" class="img-fluid image-height-534" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[12].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[12].genericId}" th:text="${movieGenres[12].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[12].genericId}" th:text="${movieGenres[12].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[13].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[13].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[13].genericId}" th:text="${movieGenres[13].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[13].genericId}" th:text="${movieGenres[13].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[14].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[14].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[14].genericId}" th:text="${movieGenres[14].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[14].genericId}" th:text="${movieGenres[14].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[15].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[15].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[15].genericId}" th:text="${movieGenres[15].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[15].genericId}" th:text="${movieGenres[15].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[16].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[16].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[16].genericId}" th:text="${movieGenres[16].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[16].genericId}" th:text="${movieGenres[16].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[17].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[17].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[17].genericId}" th:text="${movieGenres[17].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[17].genericId}" th:text="${movieGenres[17].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + movieGenres[18].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/movies/' + movieGenres[18].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[18].genericId}" th:text="${movieGenres[18].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/movies/' + movieGenres[18].genericId}" th:text="${movieGenres[18].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ms_genres_wrapper ms_genres_single padder_top30">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ms_heading">
+                        <h1>Show Genres</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[0].genericName + '.jpg'}" alt="" class="img-fluid image-height-534" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[0].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[0].genericId}" th:text="${showGenres[0].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[0].genericId}" th:text="${showGenres[0].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + showGenres[1].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/shows/' + showGenres[1].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[1].genericId}" th:text="${showGenres[1].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[1].genericId}" th:text="${showGenres[1].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + showGenres[2].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/shows/' + showGenres[2].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[2].genericId}" th:text="${showGenres[2].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[2].genericId}" th:text="${showGenres[2].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + showGenres[3].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/shows/' + showGenres[3].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[3].genericId}" th:text="${showGenres[3].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[3].genericId}" th:text="${showGenres[3].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + showGenres[5].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/shows/' + showGenres[5].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[5].genericId}" th:text="${showGenres[5].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[5].genericId}" th:text="${showGenres[5].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[4].genericName + '.jpg'}" alt="" class="img-fluid image-height-534" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[4].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[4].genericId}" th:text="${showGenres[4].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[4].genericId}" th:text="${showGenres[4].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + showGenres[7].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/shows/' + showGenres[7].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[7].genericId}" th:text="${showGenres[7].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[7].genericId}" th:text="${showGenres[7].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + showGenres[11].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/shows/' + showGenres[11].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[11].genericId}" th:text="${showGenres[11].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[11].genericId}" th:text="${showGenres[11].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + showGenres[12].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/shows/' + showGenres[12].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[12].genericId}" th:text="${showGenres[12].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[12].genericId}" th:text="${showGenres[12].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + showGenres[9].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/shows/' + showGenres[9].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[9].genericId}" th:text="${showGenres[9].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[9].genericId}" th:text="${showGenres[9].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ms_genres_box">
+                                <img th:src="${'/genres/' + showGenres[10].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <a th:href="${'/genre/shows/' + showGenres[10].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                                    </div>
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[10].genericId}" th:text="${showGenres[10].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                                <div class="ms_box_overlay_on">
+                                    <div class="ovrly_text_div">
+                                        <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[10].genericId}" th:text="${showGenres[10].genericName}">romantic</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[6].genericName + '.jpg'}" alt="" class="img-fluid image-height-534" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[6].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[6].genericId}" th:text="${showGenres[6].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[6].genericId}" th:text="${showGenres[6].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[8].genericName + '.jpg'}" alt="" class="img-fluid image-height-534" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[8].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[8].genericId}" th:text="${showGenres[8].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[8].genericId}" th:text="${showGenres[8].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[13].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[13].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[13].genericId}" th:text="${showGenres[13].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[13].genericId}" th:text="${showGenres[13].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[14].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[14].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[14].genericId}" th:text="${showGenres[14].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[14].genericId}" th:text="${showGenres[14].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[15].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[15].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[15].genericId}" th:text="${showGenres[15].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[15].genericId}" th:text="${showGenres[15].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[16].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[16].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[16].genericId}" th:text="${showGenres[16].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[16].genericId}" th:text="${showGenres[16].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[18].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[18].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[18].genericId}" th:text="${showGenres[18].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[18].genericId}" th:text="${showGenres[18].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="ms_genres_box">
+                        <img th:src="${'/genres/' + showGenres[17].genericName + '.jpg'}" alt="" class="img-fluid image-height-252" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <a th:href="${'/genre/shows/' + showGenres[17].genericId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[17].genericId}" th:text="${showGenres[17].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a th:href="${'/genre/shows/' + showGenres[17].genericId}" th:text="${showGenres[17].genericName}">romantic</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<div th:replace="fragments/scriptFile :: scriptFile"></div>
+<script type="text/javascript" th:inline="javascript">
+ //<![CDATA[
+	$(function() {
+		var pageIndex = [[${pageIndex}]];
+		var genreId = [[${genreId}]];
+		$.get("/genre/movies/append?genreId=" + genreId + "&pageIndex=" + pageIndex, function(response) {
+			$("#appendData").append(response);
+		});
+
+		$(document.body).on('touchmove', onScroll);
+		$(window).on('scroll', onScroll);
+		function onScroll() {
+			if (Math.round($(window).scrollTop() + window.innerHeight) >= document.body.scrollHeight) {
+				pageIndex = parseInt(pageIndex) + 1;
+				$.get("/genre/movies/append?genreId=" + genreId + "&pageIndex=" + pageIndex, function(response) {
+                    $("#appendData").append(response);
+                });
+			}
+		}
+	});
+ // ]]>
+</script>
+</body>
+</html>

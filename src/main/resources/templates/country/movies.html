@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"></head>
+<body>
+<div class="ms_main_wrapper">
+    <div th:replace="fragments/sideMenu :: sideMenu"></div>
+    <div class="ms_content_wrapper padder_top80">
+        <div th:replace="fragments/topMenu :: topMenu"></div>
+        <div class="ms_blog_wrapper">
+            <div class="ms_heading">
+                <h1 th:text="${'Country (' + countryCode +') movies'}">Country Movies</h1>
+                <span class="veiw_all"><a th:href="${'/country/shows/' + countryCode}" th:style="${userSearch == 'shows' ? 'color:#3bc8e7;': ''}">Shows</a></span>
+                <span class="veiw_all" style="margin-right:15px;"><a th:href="${'/country/movies/' + countryCode}" th:style="${userSearch == 'movies' ? 'color:#3bc8e7;': ''}">Movies</a></span>
+            </div>
+            <span id="appendData"></span>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/scriptFile :: scriptFile"></div>
+<script type="text/javascript" th:inline="javascript">
+ //<![CDATA[
+	$(function() {
+		var pageIndex = [[${pageIndex}]];
+		var countryCode = [[${countryCode}]];
+		$.get("/country/movies/append?countryCode=" + countryCode + "&pageIndex=" + pageIndex, function(response) {
+			$("#appendData").append(response);
+		});
+
+		$(document.body).on('touchmove', onScroll);
+		$(window).on('scroll', onScroll);
+		function onScroll() {
+			if (Math.round($(window).scrollTop() + window.innerHeight) >= document.body.scrollHeight) {
+				pageIndex = parseInt(pageIndex) + 1;
+				$.get("/country/movies/append?countryCode=" + countryCode + "&pageIndex=" + pageIndex, function(response) {
+                    $("#appendData").append(response);
+                });
+			}
+		}
+	});
+ // ]]>
+</script>
+</body>
+</html>

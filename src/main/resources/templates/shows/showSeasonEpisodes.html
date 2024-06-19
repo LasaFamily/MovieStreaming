@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ms_heading">
+            <h1>Show Episodes</h1>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-12 padding_right40" th:each="episode, iter : ${episodes}">
+        <div class="ms_weekly_box">
+            <div class="weekly_left">
+                <span class="w_top_no"
+                      th:text="${(iter.index + 1) <= 9 ? '0'+ (iter.index + 1) : iter.index + 1}">
+                    01
+                </span>
+                <div class="w_top_song">
+                    <div class="w_tp_song_img">
+                        <img th:src="${episode.episodeImage != null ? 'https://image.tmdb.org/t/p/w50_and_h50_face' + episode.episodeImage :  '/default/default.svg'}"
+                             alt="" class="img-fluid">
+                        <div class="ms_song_overlay">
+                        </div>
+                        <div class="ms_play_icon">
+                            <a href="javascript:void(0)" th:attr="onclick=|streamingEpisode('${episode.episodeNumber}', 0)|"><img
+                                    th:src="@{/images/svg/play.svg}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="w_tp_song_name">
+                        <h3 class="max-width-236">
+                            <a href="javascript:void(0)" th:attr="onclick=|streamingEpisode('${episode.episodeNumber}', 0)|" th:text="${episode.episodeName}">Until I Met You</a>
+                        </h3>
+                        <p th:text="${episode.episodeRunTime}" class="max-width-236">Ava Cornish</p>
+                    </div>
+                </div>
+            </div>
+            <div class="weekly_right">
+                <span class="w_song_time" th:text="${episode.episodeRating}">5:10</span>
+            </div>
+        </div>
+        <div class="ms_divider"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

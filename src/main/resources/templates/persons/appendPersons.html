@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<style>
+@media only screen and (min-width: 992px) {
+  .col-lg-2 {
+    -ms-flex: 0 0 20%!important;
+    flex: 0 0 20%!important;
+    max-width: 20%!important;
+}
+}
+</style>
+<div class="row">
+    <div class="col-lg-2 col-sm-12" th:each="person : ${persons}">
+        <div class="ms_genres_box">
+            <img th:src="${person.personPoster != null ? 'https://image.tmdb.org/t/p/original' + person.personPoster : '/default/default.svg'}" alt="" class="img-fluid image-height-252" />
+            <div class="ms_main_overlay">
+                <div class="ms_box_overlay"></div>
+                <div class="ms_play_icon">
+                    <a th:href="${'/person/movies/' + person.personId}"><img th:src="@{/images/svg/play.svg}" alt=""></a>
+                </div>
+                <div class="ovrly_text_div">
+                    <span class="ovrly_text1"><a th:href="${'/person/movies/' + person.personId}" th:text="${person.personName}">romantic</a></span>
+                    <div class="bottom">
+                        <span class="ovrly_text1"><a th:href="${'/person/movies/' + person.personId}" th:text="${person.personPopularity}"></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ms_box_overlay_on">
+                <div class="ovrly_text_div">
+                    <span class="ovrly_text1"><a th:href="${'/person/movies/' + person.personId}" th:text="${person.personName}">romantic</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

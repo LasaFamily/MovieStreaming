@@ -1,0 +1,19 @@
+server:
+  port: 7861
+movie:
+  bearer:
+    token: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NjMzMzcwNTU1MzBjYzc3YTNhYTFkMjZmZWMzNjVkNSIsInN1YiI6IjVjNGFhNDg0OTI1MTQxMGUyNDU3NWJhZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eCCzTnm-zslw-aTMXm8Hx-uZQihFoLxNVFDw94lJEVQ
+  base:
+    url: https://api.themoviedb.org/3
+  host:
+    url: http://localhost:7861
+
+spring:
+  datasource:
+    username: moviestreaming_user
+    url: jdbc:postgresql://dpg-cppc0raj1k6c738020tg-a.oregon-postgres.render.com/moviestreaming
+    password: QfH5sFquk5TOQvKRJu4DBiCjasrE4hEb
+  jpa:
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
