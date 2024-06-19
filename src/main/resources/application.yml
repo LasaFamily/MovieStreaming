@@ -1,5 +1,3 @@
-server:
-  port: 7861
 movie:
   bearer:
     token: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NjMzMzcwNTU1MzBjYzc3YTNhYTFkMjZmZWMzNjVkNSIsInN1YiI6IjVjNGFhNDg0OTI1MTQxMGUyNDU3NWJhZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eCCzTnm-zslw-aTMXm8Hx-uZQihFoLxNVFDw94lJEVQ
