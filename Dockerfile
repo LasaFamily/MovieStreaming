@@ -5,4 +5,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:11
 COPY --from=build /target/moviekit-0.0.1-SNAPSHOT.jar moviekit.jar
 EXPOSE 8080
-ENTRYPOINT ["java" "-jar", "moviekit.jar"]
+ENTRYPOINT ["java", "-jar", "moviekit.jar"]
